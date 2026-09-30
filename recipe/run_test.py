@@ -11,6 +11,7 @@ REPORT = [
 ]
 PYTEST = ["pytest", "-vv", "--tb=long", "--color=yes"]
 RUN = ["coverage", "run", "--append", "--branch", "--source=pytest_beartype", "-m"]
+
 EXCURSIONS = [
     [],
     ["--beartype-packages", "pytest_beartype"],
