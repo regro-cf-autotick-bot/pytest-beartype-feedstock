@@ -49,11 +49,12 @@ tests:
         - tests/**
     requirements:
       run:
-        - coverage
+        - coverage >=5.5
         - mypy
         - pip
         - pytest
-        - python ${{ python_min }}
+        - pytest-asyncio
+        - python ${{ python_min }}.*
     script:
       - python run_test.py
       - mypy -p pytest_beartype
