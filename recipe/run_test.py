@@ -9,7 +9,7 @@ REPORT = [
     "--fail-under",
     "95",
 ]
-PYTEST = ["pytest", "-vv", "--tb=long", "--color=yes"]
+PYTEST = ["pytest", "-vv", "--tb=long", "--color=yes", "pytest_beartype_test"]
 RUN = ["coverage", "run", "--append", "--branch", "--source=pytest_beartype", "-m"]
 
 EXCURSIONS = [

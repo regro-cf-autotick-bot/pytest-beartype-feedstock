@@ -37,7 +37,6 @@ tests:
       site_packages:
         - pytest_beartype/**
         - pytest_beartype-${{ version }}.dist-info/**
-
   - python:
       imports: pytest_beartype
       pip_check: true
@@ -46,7 +45,7 @@ tests:
         - ${{ python_check_max }}.*
   - files:
       source:
-        - tests/**
+        - pytest_beartype/**
     requirements:
       run:
         - coverage >=5.5
