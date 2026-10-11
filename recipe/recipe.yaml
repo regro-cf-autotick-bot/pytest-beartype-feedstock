@@ -45,7 +45,9 @@ tests:
         - ${{ python_check_max }}.*
   - files:
       source:
-        - pytest_beartype/**
+        - conftest.py
+        - pytest_beartype_test/**
+        - pytest.ini
     requirements:
       run:
         - coverage >=5.5
@@ -55,14 +57,14 @@ tests:
         - pytest-asyncio
         - python ${{ python_min }}.*
     script:
-      - python run_test.py
-      - mypy -p pytest_beartype
+      file: run_test.py
 
 about:
   summary: Pytest plugin to run your tests with beartype checking enabled.
   license: MIT
   license_file: LICENSE
-  homepage: https://github.com/tusharsadhwani/pytest-beartype
+  homepage: https://pypi.org/project/pytest-beartype
+  repository: https://github.com/beartype/pytest-beartype
 
 extra:
   recipe-maintainers:
